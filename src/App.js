@@ -17,7 +17,7 @@ function App() {
         <Route path="/parks/:id/trails/new">
           <NewTrailForm />
         </Route>
-        <Route path="/parks/:id/trails">
+        <Route path="/parks/:id">
           <TrailsContainer />
         </Route>
         <Route path="/parks">
