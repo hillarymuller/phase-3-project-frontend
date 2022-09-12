@@ -14,7 +14,7 @@ function App() {
         <Navbar />
       </header>
       <Switch>
-        <Route path="/parks/:id/trails/new">
+        <Route path="/parks/:id/new">
           <NewTrailForm />
         </Route>
         <Route path="/parks/:id">

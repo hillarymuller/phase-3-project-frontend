@@ -14,7 +14,14 @@ const TrailsContainer = () => {
         .then(data => setTrails(data))
         .catch(error => alert(error))
     }, []);
-const trailList = trails.map(trail => <TrailCard trail={trail} key={trail.id} />)
+    
+    function onDeleteItem(id) {
+        const updatedTrails = trails.filter(trail => trail.id !== id);
+        setTrails(updatedTrails);
+        console.log(trails);
+    }
+const trailList = trails.map(trail => <TrailCard trail={trail} key={trail.id} onDeleteItem={onDeleteItem} />)
+
 return (
     <div>
         {trailList}
