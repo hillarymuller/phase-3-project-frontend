@@ -9,7 +9,7 @@ const Navbar = () => {
             <NavLink to="/parks">
                 Parks
             </NavLink>
-            <NavLink to="/parks/:id/trails/new">
+            <NavLink to="/parks/new">
                 New Trail
             </NavLink>
         </div>
