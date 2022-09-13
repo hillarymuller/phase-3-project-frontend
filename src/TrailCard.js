@@ -15,9 +15,9 @@ const TrailCard = ({ trail, onDeleteItem }) => {
         <br></br>
         <br></br>
         <span>{description}</span>
-        <h4>{length}mi</h4>
-        <h4>{difficulty}</h4>
-        <button onClick={() => handleDelete(id)}>Delete Trail</button>
+        <h4>length: {length}mi</h4>
+        <h4>difficulty: {difficulty}</h4>
+        <button className="card-button" onClick={() => handleDelete(id)}>Delete Trail</button>
         <br></br>
 
     </div>

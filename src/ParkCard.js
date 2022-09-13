@@ -12,7 +12,7 @@ return (
         <span>{description}</span>
         <br></br>
         <h4>{location}</h4>
-        <Link to={`/parks/${id}`}>View Trails</Link>
+        <Link className="card-link" to={`/parks/${id}`}>View Trails</Link>
       
 
     </div>
