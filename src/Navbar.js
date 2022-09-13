@@ -1,15 +1,44 @@
 import { NavLink } from "react-router-dom";
 
+const style = {
+    width: "60%",
+    margin: "5% 0 1%",
+    padding: "1em",
+    textDecoration: "none",
+    color: "white",
+    backgroundColor: 'rgb(2, 38, 21)',
+    fontWeight: "bold",
+    verticalAlign: "center", 
+    fontFamily: "Impact, fantasy"
+}
 const Navbar = () => {
     return (
         <div>
-            <NavLink to="/">
+            <NavLink   exact
+            style={style}
+            activeStyle={{
+                fontWeight: "bolder",
+                color: "#10ecc3"
+            }}
+            to="/">
                 Home
             </NavLink>
-            <NavLink to="/parks">
+            <NavLink   exact
+            style={style}
+            activeStyle={{
+                fontWeight: "bolder",
+                color: "#10ecc3"
+            }}
+            to="/parks">
                 Parks
             </NavLink>
-            <NavLink to="/parks/new">
+            <NavLink   exact
+            style={style}
+            activeStyle={{
+                fontWeight: "bolder",
+                color: "#10ecc3"
+            }}
+            to="/parks/new">
                 New Trail
             </NavLink>
         </div>

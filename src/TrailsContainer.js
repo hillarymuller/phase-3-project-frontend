@@ -23,7 +23,7 @@ const TrailsContainer = () => {
 const trailList = trails.map(trail => <TrailCard trail={trail} key={trail.id} onDeleteItem={onDeleteItem} />)
 
 return (
-    <div>
+    <div className="cards">
 
         {trailList}
     </div>

@@ -12,10 +12,13 @@ const TrailCard = ({ trail, onDeleteItem }) => {
         <div className="card">
         <h3>{name}</h3>
         <img src={image} alt={description}></img>
+        <br></br>
+        <br></br>
         <span>{description}</span>
         <h4>{length}mi</h4>
         <h4>{difficulty}</h4>
         <button onClick={() => handleDelete(id)}>Delete Trail</button>
+        <br></br>
 
     </div>
     )

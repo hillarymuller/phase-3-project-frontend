@@ -26,7 +26,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Project</h1>
+        <h1>Wisconsin Hiking Trails</h1>
         <Navbar />
       </header>
       <Switch>

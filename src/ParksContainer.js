@@ -8,9 +8,12 @@ const ParksContainer = ({ parks }) => {
 
 return (
     <div>
-        <h2>Park List</h2>
+            <h3>Park List</h3>
+            <div className="cards">
         {parkList}
+        </div>
     </div>
 )
 }
+
 export default ParksContainer;
