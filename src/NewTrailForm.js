@@ -45,7 +45,7 @@ function handleSubmit(e) {
 
 
 function redirect() {
-    history.push("/parks");
+    history.push(`/parks/${formData.parkId}`);
 }
 
 return (
