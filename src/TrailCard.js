@@ -1,11 +1,11 @@
-const TrailCard = ({ trail, onDeleteItem }) => {
+const TrailCard = ({ trail, setTrails }) => {
     const { name, description, image, length, difficulty, id, park_id: parkId } = trail;
     function handleDelete(id) {
         fetch(`http://localhost:9292/parks/${parkId}/${id}`, {
             method: 'DELETE'
         })
-    
-        .then(() => onDeleteItem(id))
+    .then(r => r.json())
+        .then((data) => setTrails(data))
         .catch(error => console.log(error))
     }
     return (
