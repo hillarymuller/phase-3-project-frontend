@@ -39,6 +39,15 @@ const Navbar = () => {
                 color: "#10ecc3"
             }}
             to="/parks/new">
+                New Park
+            </NavLink>
+            <NavLink   exact
+            style={style}
+            activeStyle={{
+                fontWeight: "bolder",
+                color: "#10ecc3"
+            }}
+            to="/trails/new">
                 New Trail
             </NavLink>
         </div>

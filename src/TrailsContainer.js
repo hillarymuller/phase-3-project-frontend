@@ -8,7 +8,7 @@ const TrailsContainer = () => {
     const [trails, setTrails] = useState([]);
   
     useEffect(() => {
-        fetch(`http://localhost:9292/parks/${id}`)
+        fetch(`http://localhost:9292/parks/${id}/trails`)
         .then(r => r.json())
         .then(data => setTrails(data))
         .catch(error => alert(error))

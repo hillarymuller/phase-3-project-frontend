@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import ParksContainer from "./ParksContainer";
 import NewTrailForm from "./NewTrailForm";
+import NewParkForm from "./NewParkForm";
 import TrailsContainer from './TrailsContainer';
 import Home from "./Home";
 import { Switch, Route } from "react-router-dom";
@@ -22,6 +23,9 @@ function App() {
   function onFormSubmit(newTrail) {
     console.log(newTrail)
 }
+function onAddPark(newPark) {
+  setParks(...parks, newPark)
+}
  
   return (
     <div className="App">
@@ -30,12 +34,16 @@ function App() {
         <Navbar />
       </header>
       <Switch>
-        <Route path="/parks/new">
+        <Route path="/trails/new">
           <NewTrailForm parks={parks} onFormSubmit={onFormSubmit} />
         </Route>
-        <Route path="/parks/:id">
+        <Route exact path="/parks/new">
+          <NewParkForm onAddPark={onAddPark} />
+        </Route>
+        <Route path="/parks/:id/trails">
           <TrailsContainer />
         </Route>
+      
         <Route path="/parks">
           <ParksContainer parks={parks} />
         </Route>

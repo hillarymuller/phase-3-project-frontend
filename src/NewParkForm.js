@@ -5,16 +5,14 @@ import { useHistory } from 'react-router-dom';
 
 
 
-const NewTrailForm = ({ parks, onFormSubmit }) => {
+const NewParkForm = ({ onAddPark }) => {
     const history = useHistory();
 
     const [formData, setFormData] = useState({
     name: "",
     image: "",
     description: "",
-    length: 0,
-    difficulty: "",
-    parkId: 0
+    location: ""
 });
 
 function handleChange(e) {
@@ -23,7 +21,7 @@ function handleChange(e) {
 
 function handleSubmit(e) {
     e.preventDefault();
-    fetch(`http://localhost:9292/parks/${formData.parkId}/trails`, {
+    fetch(`http://localhost:9292/parks`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
@@ -32,28 +30,26 @@ function handleSubmit(e) {
             "name": formData.name,
             "image": formData.image,
             "description": formData.description,
-            "length": formData.length,
-            "difficulty": formData.difficulty,
-            "park_id": formData.parkId
+            "location": formData.location
         })
     })
     .then(r => r.json())
     .then(data => console.log(data))
-    .then(data => onFormSubmit(data))
+    .then(data => onAddPark(data))
     .then(redirect())
 }
 
 
 function redirect() {
-    history.push(`/parks/${formData.parkId}/trails`);
+    history.push(`/parks`);
 }
 
 return (
     <section>
-        <h3>Add New Trail</h3>
+        <h3>Add New Park</h3>
         <form onSubmit={handleSubmit}>
             <label>
-                Trail Name:
+                Park Name:
                 <input onChange={handleChange}
                 type="text"
                 name="name"
@@ -80,33 +76,17 @@ return (
             </label>
             <br></br>
             <label>
-                Difficulty
+                Location
                 <input onChange={handleChange}
                 type="text"
-                name="difficulty"
-                value={formData.difficulty}
+                name="location"
+                value={formData.location}
                 />
             </label>
             <br></br>
-            <label>
-                Length
-                <input onChange={handleChange}
-                type="number"
-                name="length"
-                value={formData.length}
-                />
-            </label>
-            <br></br>
-            <label>
-                Park
-                <select value={formData.parkId} onChange={handleChange} name="parkId">
-                    <option>Please choose a park</option>
-                    {parks.map(park => <option value={park.id} key={park.id}>{park.name}</option>)}
-                    </select> 
-            </label>
             <button type="submit">Add</button>
         </form>
     </section>
 )
 }
-export default NewTrailForm;
+export default NewParkForm;

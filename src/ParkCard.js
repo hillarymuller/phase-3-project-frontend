@@ -5,14 +5,14 @@ const ParkCard = ({ park }) => {
 return (
     <div className="card">
        
-        <h2 class="title">{name}</h2>
+        <h2>{name}</h2>
         <img src={image} alt={description}></img>
         <br></br>
         <br></br>
         <span>{description}</span>
         <br></br>
         <h4>{location}</h4>
-        <Link className="card-link" to={`/parks/${id}`}>View Trails</Link>
+        <Link className="card-link" to={`/parks/${id}/trails`}>View Trails</Link>
       
 
     </div>
