@@ -1,7 +1,7 @@
 # WISCONSIN HIKING TRAILS - Frontend
 
 ## Description
-I recently moved to Wisconsin, and I'm eager to explore a new state. I built this application for a user to keep track of trails they would like to hike. The frontend of this app is very simple, since the maind goal of this project was to use Sinatra for the first time to build a backend.
+I recently moved to Wisconsin, and I'm eager to explore a new state. I built this application for a user to keep track of trails they would like to hike. The frontend of this app is very simple, since the main goal of this project was to use Sinatra for the first time to build a backend.
 
 
 The app is very green, just like the Wisconsin parks, and allows users to:
