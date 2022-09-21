@@ -12,7 +12,7 @@ The app is very green, just like the Wisconsin parks, and allows users to:
 - View the full list of parks
 - View a list of trails that are in each park
 
-Check out a walkthrough of the features of the application here: https://youtu.be/bGKavDYGcH4
+Check out a walkthrough of the features of the application here: https://youtu.be/0hJFwfdUdUo
 
 
 Additional features to add in the future could include:
