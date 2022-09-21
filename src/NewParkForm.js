@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useHistory } from 'react-router-dom';
+import ParksContainer from "./ParksContainer";
 
 
 
 
 
-const NewParkForm = ({ onAddPark }) => {
+
+const NewParkForm = ({ setParks }) => {
     const history = useHistory();
 
     const [formData, setFormData] = useState({
@@ -34,15 +36,12 @@ function handleSubmit(e) {
         })
     })
     .then(r => r.json())
-    .then(data => console.log(data))
-    .then(data => onAddPark(data))
-    .then(redirect())
+    .then(data => setParks(data))
+    .then(() => history.push('/parks'))
 }
 
 
-function redirect() {
-    history.push(`/parks`);
-}
+
 
 return (
     <section>

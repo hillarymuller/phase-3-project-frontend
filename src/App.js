@@ -23,9 +23,10 @@ function App() {
   function onFormSubmit(newTrail) {
     console.log(newTrail)
 }
-function onAddPark(newPark) {
-  setParks(...parks, newPark)
-}
+//function onAddPark(newPark) {
+  //setParks(...parks, newPark)
+//}
+
  
   return (
     <div className="App">
@@ -38,7 +39,7 @@ function onAddPark(newPark) {
           <NewTrailForm parks={parks} onFormSubmit={onFormSubmit} />
         </Route>
         <Route exact path="/parks/new">
-          <NewParkForm onAddPark={onAddPark} />
+          <NewParkForm setParks={setParks} />
         </Route>
         <Route path="/parks/:id/trails">
           <TrailsContainer />
